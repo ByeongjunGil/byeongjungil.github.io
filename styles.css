@@ -15,11 +15,34 @@
   --beam-dim:  #2f5d59;
   --gold:      #d6a85f;   /* diffraction spot warm highlight */
 
+  --on-beam:   #08110f;   /* text/icon on top of --beam fills */
+  --dot-glow:  rgba(106,215,200,0.05);
+  --dot:       rgba(106,215,200,0.45);
+  --beam-shadow: rgba(106,215,200,0.22);
+
   --display: "Fraunces", Georgia, serif;
-  --body:    "Inter", system-ui, sans-serif;
+  --body:    "Inter", "Noto Sans KR", system-ui, sans-serif;
   --mono:    "JetBrains Mono", ui-monospace, monospace;
 
   --maxw: 980px;
+}
+
+/* Light theme — toggled via <html class="light"> */
+html.light {
+  --bg:        #f7f6f2;   /* warm paper white */
+  --bg-soft:   #ffffff;   /* raised panels */
+  --ink:       #16202e;   /* primary text (near-ink) */
+  --ink-soft:  #4a5568;   /* secondary text */
+  --ink-faint: #8a93a3;   /* captions, meta */
+  --line:      #e2e0d8;   /* hairlines */
+  --beam:      #1c8c7d;   /* deeper teal so it reads on white */
+  --beam-dim:  #9fd4cb;
+  --gold:      #b07d2e;   /* darker gold for contrast on light */
+
+  --on-beam:   #ffffff;
+  --dot-glow:  rgba(28,140,125,0.04);
+  --dot:       rgba(28,140,125,0.28);
+  --beam-shadow: rgba(28,140,125,0.20);
 }
 
 * { box-sizing: border-box; }
@@ -36,6 +59,7 @@ body {
   -webkit-font-smoothing: antialiased;
   position: relative;
   overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* --- Ambient reciprocal-lattice field --------------------- */
@@ -45,8 +69,8 @@ body {
   z-index: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(circle at 50% 50%, rgba(106,215,200,0.05) 0, transparent 60%),
-    radial-gradient(circle, rgba(106,215,200,0.45) 0.8px, transparent 1.6px);
+    radial-gradient(circle at 50% 50%, var(--dot-glow) 0, transparent 60%),
+    radial-gradient(circle, var(--dot) 0.8px, transparent 1.6px);
   background-size: 100% 100%, 46px 46px;
   background-position: center, center;
   opacity: 0.5;
@@ -90,6 +114,52 @@ main, .site-header, .site-footer { position: relative; z-index: 1; }
 }
 .nav-list a:hover { color: var(--beam); }
 
+/* --- Header right cluster + language toggle --------------- */
+.header-right { display: flex; align-items: center; gap: 24px; }
+.lang-toggle {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.lang-btn {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  padding: 5px 10px;
+  background: transparent;
+  color: var(--ink-faint);
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+.lang-btn:hover { color: var(--ink-soft); }
+.lang-btn.is-active { background: var(--beam); color: var(--on-beam); }
+.lang-btn:focus-visible { outline: 2px solid var(--beam); outline-offset: 2px; }
+
+/* Theme toggle button */
+.theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 28px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1;
+  transition: color 0.2s, border-color 0.2s;
+}
+.theme-btn:hover { color: var(--beam); border-color: var(--beam-dim); }
+.theme-btn:focus-visible { outline: 2px solid var(--beam); outline-offset: 2px; }
+/* Show moon in dark mode, sun in light mode */
+.theme-icon-light { display: none; }
+html.light .theme-icon-dark { display: none; }
+html.light .theme-icon-light { display: inline; }
+
 /* --- Layout shells ---------------------------------------- */
 main { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
 
@@ -129,12 +199,18 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
   margin: 0 0 22px;
 }
 .hero h1 {
-  font-family: var(--display);
+  font-family: var(--display), "Noto Sans KR";
   font-weight: 600;
   font-size: clamp(3rem, 8vw, 5rem);
   line-height: 0.98;
   letter-spacing: -0.02em;
   margin: 0 0 28px;
+}
+/* Korean name uses the Korean face at a slightly tighter size */
+html[lang="ko"] .hero h1 {
+  font-family: "Noto Sans KR", var(--display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 .lede {
   font-size: clamp(1.1rem, 2.4vw, 1.4rem);
@@ -166,10 +242,10 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
   border-radius: 2px;
   text-decoration: none;
   background: var(--beam);
-  color: #08110f;
+  color: var(--on-beam);
   transition: transform 0.15s, box-shadow 0.2s;
 }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(106,215,200,0.22); }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 22px var(--beam-shadow); }
 .btn.ghost {
   background: transparent;
   color: var(--beam);
@@ -238,33 +314,19 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
 .pub-status a { color: var(--ink-faint); text-decoration: none; transition: color 0.2s; }
 .pub-status a:hover { color: var(--beam); }
 
-.coauthor { margin-top: 28px; }
-.coauthor summary {
-  cursor: pointer;
+/* Subheading that separates first-author from co-author lists */
+.pub-subhead {
   font-family: var(--mono);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--beam);
-  padding: 10px 0;
-  list-style: none;
+  margin: 0 0 4px;
 }
-.coauthor summary::-webkit-details-marker { display: none; }
-.coauthor summary::before { content: "+ "; color: var(--ink-faint); }
-.coauthor[open] summary::before { content: "− "; }
-.coauthor summary span { color: var(--ink-faint); }
-.coauthor-list { list-style: none; margin: 12px 0 0; padding: 0; }
-.coauthor-list li {
-  font-size: 0.86rem;
-  color: var(--ink-soft);
-  padding: 8px 0;
-  border-bottom: 1px solid var(--line);
-}
-.coauthor-list em { color: var(--ink-faint); font-style: normal; font-family: var(--mono); font-size: 0.78rem; }
-.venue-sm {
-  font-family: var(--mono);
-  font-size: 0.76rem;
-  color: var(--gold);
-  margin-right: 8px;
-}
+.pub-subhead + .pub-list { margin-top: 0; }
+/* Spacing before the second subhead so it doesn't crowd the list above */
+.pub-list + .pub-subhead { margin-top: 40px; }
 
 /* --- Talks ------------------------------------------------ */
 .talk-list { list-style: none; margin: 0; padding: 0; }
@@ -289,7 +351,10 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
   text-align: center;
 }
 .talk-tag.invited { color: var(--gold); border-color: rgba(214,168,95,0.4); }
+.talk-tag.poster { color: var(--beam); border-color: var(--beam-dim); }
 .talk-title { font-size: 0.98rem; font-weight: 500; margin: 0 0 4px; color: var(--ink); line-height: 1.4; }
+.talk-authors { font-size: 0.82rem; color: var(--ink-soft); margin: 0 0 4px; line-height: 1.4; }
+.talk-authors strong { color: var(--beam); font-weight: 600; }
 .talk-where { font-size: 0.83rem; color: var(--ink-soft); margin: 0; }
 .talk-date { font-family: var(--mono); font-size: 0.78rem; color: var(--ink-faint); white-space: nowrap; }
 
@@ -307,6 +372,42 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
 .award-name { font-size: 0.98rem; font-weight: 500; margin: 0 0 3px; color: var(--ink); }
 .award-org { font-size: 0.84rem; color: var(--ink-soft); margin: 0; }
 .award-paper { font-size: 0.82rem; font-style: italic; color: var(--ink-faint); margin: 4px 0 0; line-height: 1.45; }
+
+/* --- Education & Experience ------------------------------- */
+.bg-grid { display: block; }
+.bg-col + .bg-col { margin-top: 32px; }
+.bg-label {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--beam);
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.cv-list { list-style: none; margin: 0; padding: 0; }
+.cv-item { padding: 11px 0; border-bottom: 1px solid var(--line); position: relative; }
+.cv-item:last-child { border-bottom: none; }
+/* Line 1: organization (bold) + location, with date pinned top-right */
+.cv-line1 {
+  margin-bottom: 2px;
+  padding-right: 150px;
+}
+.cv-org { font-size: 0.96rem; font-weight: 600; color: var(--ink); }
+.cv-loc { font-size: 0.88rem; color: var(--ink-soft); }
+.cv-date {
+  position: absolute;
+  top: 13px;
+  right: 0;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: var(--gold);
+  white-space: nowrap;
+  text-align: right;
+}
+/* Line 2: degree/role + advisor */
+.cv-line2 { font-size: 0.86rem; color: var(--ink-soft); margin: 0; line-height: 1.4; }
 
 /* --- Technical -------------------------------------------- */
 .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
@@ -362,9 +463,12 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
 @media (max-width: 760px) {
   body { font-size: 16px; }
   .site-header { flex-direction: column; gap: 16px; padding: 22px; }
+  .header-right { flex-direction: column; gap: 14px; }
   .nav-list { gap: 18px; flex-wrap: wrap; justify-content: center; }
   main { padding: 0 22px; }
-  .focus-grid, .tech-grid { grid-template-columns: 1fr; }
+  .focus-grid, .tech-grid, .bg-grid { grid-template-columns: 1fr; }
+  .cv-line1 { padding-right: 0; }
+  .cv-date { position: static; display: block; margin-top: 2px; text-align: left; }
   .pub { grid-template-columns: 1fr; gap: 8px; }
   .pub-venue { flex-direction: row; gap: 10px; align-items: baseline; }
   .talk { grid-template-columns: 70px 1fr; }
