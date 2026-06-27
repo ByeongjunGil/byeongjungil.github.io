@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Byeongjun Gil — Electron Microscopist</title>
-  <meta name="description" content="Byeongjun Gil is a PhD candidate at Seoul National University developing low-dose and 4D-STEM electron microscopy to image beam-sensitive and quantum materials.">
+  <meta name="description" content="Byeongjun Gil (길병준) is a PhD candidate at Seoul National University (서울대학교) developing low-dose and 4D-STEM electron microscopy to image beam-sensitive and quantum materials.">
+  <meta name="keywords" content="Byeongjun Gil, 길병준, Seoul National University, 서울대학교, electron microscopy, TEM, 4D-STEM, low-dose, halide perovskite, ptychography">
   <meta name="google-site-verification" content="K0gj-b_T-Cnl3FZCOMI-Ic1tz_FYkcfnC0b5a7ZQSj4" />
 
   <link rel="icon" href="/favicon.ico">
@@ -14,7 +15,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Byeongjun Gil — Electron Microscopist">
@@ -28,37 +29,50 @@
 
   <header class="site-header">
     <a href="#top" class="wordmark">B<span>·</span>Gil</a>
-    <nav>
-      <ul class="nav-list">
-        <li><a href="#research">Research</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#talks">Talks</a></li>
-        <li><a href="#awards">Awards</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-right">
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#research" data-en="Research" data-ko="연구">Research</a></li>
+          <li><a href="#publications" data-en="Publications" data-ko="논문">Publications</a></li>
+          <li><a href="#talks" data-en="Talks" data-ko="발표">Talks</a></li>
+          <li><a href="#awards" data-en="Awards" data-ko="수상">Awards</a></li>
+          <li><a href="#contact" data-en="Contact" data-ko="연락처">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="lang-btn is-active">EN</button>
+        <button type="button" data-lang="ko" class="lang-btn">KO</button>
+      </div>
+      <button type="button" class="theme-btn" aria-label="Toggle light or dark theme" title="Toggle theme">
+        <span class="theme-icon-dark" aria-hidden="true">☾</span>
+        <span class="theme-icon-light" aria-hidden="true">☀</span>
+      </button>
+    </div>
   </header>
 
   <main id="top">
 
     <!-- HERO -->
     <section class="hero">
-      <p class="eyebrow">Electron microscopy · Seoul National University</p>
-      <h1>Byeongjun Gil</h1>
-      <p class="lede">
+      <p class="eyebrow" data-en="Electron microscopy · Seoul National University" data-ko="전자현미경 · 서울대학교">Electron microscopy · Seoul National University</p>
+      <h1 data-en="Byeongjun Gil" data-ko="길병준">Byeongjun Gil</h1>
+      <p class="lede"
+         data-en="I build &lt;strong&gt;low-dose&lt;/strong&gt; and &lt;strong&gt;four-dimensional&lt;/strong&gt; electron microscopy methods to see materials that fall apart under the beam — halide perovskites, multiferroics, and quantum oxides — and read the structure hidden in their diffraction."
+         data-ko="저는 빔에 의해 손상되는 물질 — 할라이드 페로브스카이트, 다강체, 양자 산화물 — 을 관찰하기 위해 &lt;strong&gt;저선량(low-dose)&lt;/strong&gt;·&lt;strong&gt;4차원(4D-STEM)&lt;/strong&gt; 전자현미경 기법을 개발하고, 회절 속에 숨은 구조를 읽어냅니다.">
         I build <strong>low-dose</strong> and <strong>four-dimensional</strong> electron
         microscopy methods to see materials that fall apart under the beam — halide
         perovskites, multiferroics, and quantum oxides — and read the structure hidden
         in their diffraction.
       </p>
       <div class="hero-meta">
-        <span>PhD candidate, Materials Science &amp; Engineering</span>
-        <span>Advisor: Prof. Miyoung Kim</span>
-        <span>Former visiting researcher, Brookhaven National Lab</span>
+        <span data-en="PhD candidate, Materials Science &amp; Engineering" data-ko="박사과정, 재료공학부">PhD candidate, Materials Science &amp; Engineering</span>
+        <span data-en="Seoul National University" data-ko="서울대학교">Seoul National University</span>
+        <span data-en="Advisor: Prof. Miyoung Kim" data-ko="지도교수: 김미영 교수">Advisor: Prof. Miyoung Kim</span>
+        <span data-en="Former visiting researcher, Brookhaven National Lab" data-ko="전 방문연구원, 브룩헤이븐 국립연구소">Former visiting researcher, Brookhaven National Lab</span>
       </div>
       <div class="hero-links">
-        <a class="btn" href="#contact">Get in touch</a>
-        <a class="btn ghost" href="https://scholar.google.com/citations?user=r3LQWNEAAAAJ" target="_blank" rel="noopener">Google Scholar →</a>
+        <a class="btn" href="#contact" data-en="Get in touch" data-ko="연락하기">Get in touch</a>
+        <a class="btn ghost" href="https://scholar.google.com/citations?user=r3LQWNEAAAAJ" target="_blank" rel="noopener" data-en="Google Scholar →" data-ko="구글 스콜라 →">Google Scholar →</a>
       </div>
     </section>
 
@@ -66,56 +80,114 @@
     <section id="about" class="block">
       <div class="block-head">
         <span class="block-index">01</span>
-        <h2>About</h2>
+        <h2 data-en="About" data-ko="소개">About</h2>
       </div>
       <div class="prose">
-        <p>
+        <p data-en="I am a PhD candidate in Materials Science and Engineering at Seoul National University, working with Prof. Miyoung Kim. My research resolves atomic- and nanoscale phenomena in functional materials by developing and applying advanced scanning transmission electron microscopy."
+           data-ko="저는 서울대학교 재료공학부 박사과정으로, 김미영 교수님과 함께 연구하고 있습니다. 첨단 주사투과전자현미경(STEM) 기법을 개발하고 적용하여 기능성 물질의 원자·나노스케일 현상을 규명합니다.">
           I am a PhD candidate in Materials Science and Engineering at Seoul National
           University, working with Prof. Miyoung Kim. My research resolves atomic- and
           nanoscale phenomena in functional materials by developing and applying advanced
           scanning transmission electron microscopy.
         </p>
-        <p>
+        <p data-en="The materials I care about are the ones conventional microscopy struggles with: they degrade within seconds of exposure, or hide their order parameters below the contrast of standard imaging. I use low-dose acquisition, 4D-STEM, and electron ptychography to capture pristine structure and the pathways by which it breaks down."
+           data-ko="제가 다루는 물질은 기존 현미경으로는 관찰이 어려운 것들입니다. 노출 수 초 만에 손상되거나, 표준 이미징의 대비로는 드러나지 않는 질서변수를 가집니다. 저선량 측정, 4D-STEM, 전자 타이코그래피를 활용해 물질의 본래 구조와 그 분해 경로를 포착합니다.">
           The materials I care about are the ones conventional microscopy struggles with:
           they degrade within seconds of exposure, or hide their order parameters below the
-          contrast of standard imaging. From 2024 to 2025 I worked as a visiting researcher
-          at Brookhaven National Laboratory with Dr. Yimei Zhu, characterizing multiferroic
-          and beam-sensitive materials. I use that vantage — low-dose acquisition, 4D-STEM,
-          and electron ptychography — to capture pristine structure and the pathways by
+          contrast of standard imaging. I use low-dose acquisition, 4D-STEM,
+          and electron ptychography to capture pristine structure and the pathways by
           which it breaks down.
         </p>
       </div>
       <div class="focus-grid">
         <article class="focus">
-          <h3>Low-dose (S)TEM</h3>
-          <p>Imaging beam-sensitive halide perovskites and complex oxides before the electron beam rewrites them.</p>
+          <h3 data-en="Low-dose (S)TEM" data-ko="저선량 (S)TEM">Low-dose (S)TEM</h3>
+          <p data-en="Imaging beam-sensitive halide perovskites and complex oxides before the electron beam rewrites them."
+             data-ko="전자빔이 구조를 바꾸기 전에, 빔에 민감한 할라이드 페로브스카이트와 복합 산화물을 이미징합니다.">Imaging beam-sensitive halide perovskites and complex oxides before the electron beam rewrites them.</p>
         </article>
         <article class="focus">
-          <h3>In situ cryo-(S)TEM</h3>
-          <p>Watching temperature-driven structural and order-parameter transitions in multiferroic and quantum materials, live.</p>
+          <h3 data-en="In situ cryo-(S)TEM" data-ko="인-시추 극저온 (S)TEM">In situ cryo-(S)TEM</h3>
+          <p data-en="Watching temperature-driven structural and order-parameter transitions in multiferroic and quantum materials, live."
+             data-ko="다강체·양자 물질에서 온도에 따른 구조 및 질서변수 전이를 실시간으로 관찰합니다.">Watching temperature-driven structural and order-parameter transitions in multiferroic and quantum materials, live.</p>
         </article>
         <article class="focus">
-          <h3>Electron ptychography</h3>
-          <p>Resolving point defects and light elements that conventional STEM modes simply cannot reach.</p>
+          <h3 data-en="Electron ptychography" data-ko="전자 타이코그래피">Electron ptychography</h3>
+          <p data-en="Resolving point defects and light elements that conventional STEM modes simply cannot reach."
+             data-ko="기존 STEM 방식으로는 볼 수 없는 점결함과 경원소를 분해능 있게 관찰합니다.">Resolving point defects and light elements that conventional STEM modes simply cannot reach.</p>
         </article>
+      </div>
+    </section>
+
+    <!-- BACKGROUND -->
+    <section id="background" class="block">
+      <div class="block-head">
+        <span class="block-index">02</span>
+        <h2 data-en="Education &amp; Experience" data-ko="학력 및 경력">Education &amp; Experience</h2>
+      </div>
+      <div class="bg-grid">
+        <div class="bg-col">
+          <h3 class="bg-label" data-en="Education" data-ko="학력">Education</h3>
+          <ul class="cv-list">
+            <li class="cv-item">
+              <div class="cv-line1">
+                <span class="cv-org" data-en="Seoul National University" data-ko="서울대학교">Seoul National University</span>
+                <span class="cv-loc" data-en=", Seoul, Korea" data-ko=", 서울">, Seoul, Korea</span>
+                <span class="cv-date" data-en="Sep 2021 – Feb 2027 (expected)" data-ko="2021.09 – 2027.02 (예정)">Sep 2021 – Feb 2027 (expected)</span>
+              </div>
+              <p class="cv-line2" data-en="Ph.D. in Materials Science &amp; Engineering — Advisor: Prof. Miyoung Kim" data-ko="재료공학부 박사 — 지도교수: 김미영 교수">Ph.D. in Materials Science &amp; Engineering — Advisor: Prof. Miyoung Kim</p>
+            </li>
+            <li class="cv-item">
+              <div class="cv-line1">
+                <span class="cv-org" data-en="Pohang University of Science and Technology (POSTECH)" data-ko="포항공과대학교 (POSTECH)">Pohang University of Science and Technology (POSTECH)</span>
+                <span class="cv-loc" data-en=", Pohang, Korea" data-ko=", 포항">, Pohang, Korea</span>
+                <span class="cv-date">Mar 2015 – Aug 2021</span>
+              </div>
+              <p class="cv-line2" data-en="B.S. in Materials Science &amp; Engineering" data-ko="신소재공학과 학사">B.S. in Materials Science &amp; Engineering</p>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-col">
+          <h3 class="bg-label" data-en="Experience" data-ko="경력">Experience</h3>
+          <ul class="cv-list">
+            <li class="cv-item">
+              <div class="cv-line1">
+                <span class="cv-org" data-en="Visiting Researcher" data-ko="방문연구원">Visiting Researcher</span>
+                <span class="cv-loc" data-en=", Brookhaven National Laboratory (BNL), Upton, NY, USA" data-ko=", 브룩헤이븐 국립연구소 (BNL), 미국 뉴욕주 업튼">, Brookhaven National Laboratory (BNL), Upton, NY, USA</span>
+                <span class="cv-date">Jan 2024 – Aug 2025</span>
+              </div>
+              <p class="cv-line2" data-en="Host: Dr. Yimei Zhu — Advanced TEM/STEM characterization of multiferroic and beam-sensitive materials" data-ko="호스트: Yimei Zhu 박사 — 다강체 및 빔 민감 물질의 첨단 TEM/STEM 분석">Host: Dr. Yimei Zhu — Advanced TEM/STEM characterization of multiferroic and beam-sensitive materials</p>
+            </li>
+            <li class="cv-item">
+              <div class="cv-line1">
+                <span class="cv-org" data-en="Undergraduate Research Intern" data-ko="학부 연구 인턴">Undergraduate Research Intern</span>
+                <span class="cv-loc" data-en=", POSTECH, Pohang, Korea" data-ko=", POSTECH, 포항">, POSTECH, Pohang, Korea</span>
+                <span class="cv-date">Jan 2020 – Jan 2021</span>
+              </div>
+              <p class="cv-line2" data-en="Advisor: Prof. Donghwa Lee — First-principles (DFT) calculations" data-ko="지도교수: 이동화 교수 — 제일원리(DFT) 계산">Advisor: Prof. Donghwa Lee — First-principles (DFT) calculations</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- PUBLICATIONS -->
     <section id="publications" class="block">
       <div class="block-head">
-        <span class="block-index">02</span>
-        <h2>Selected Publications</h2>
+        <span class="block-index">03</span>
+        <h2 data-en="Selected Publications" data-ko="주요 논문">Selected Publications</h2>
       </div>
-      <p class="block-note">First- and corresponding-author work. Full list on <a href="https://scholar.google.com/citations?user=r3LQWNEAAAAJ" target="_blank" rel="noopener">Google Scholar</a>. <span class="legend">† equal contribution · ✻ corresponding</span></p>
+      <p class="block-note"
+         data-en="First- and corresponding-author work. Full list on &lt;a href=&quot;https://scholar.google.com/citations?user=r3LQWNEAAAAJ&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Google Scholar&lt;/a&gt;. &lt;span class=&quot;legend&quot;&gt;† equal contribution · ✻ corresponding&lt;/span&gt;"
+         data-ko="제1저자 및 교신저자 논문입니다. 전체 목록은 &lt;a href=&quot;https://scholar.google.com/citations?user=r3LQWNEAAAAJ&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;구글 스콜라&lt;/a&gt;에서 볼 수 있습니다. &lt;span class=&quot;legend&quot;&gt;† 공동기여 · ✻ 교신저자&lt;/span&gt;">First- and corresponding-author work. Full list on <a href="https://scholar.google.com/citations?user=r3LQWNEAAAAJ" target="_blank" rel="noopener">Google Scholar</a>. <span class="legend">† equal contribution · ✻ corresponding</span></p>
 
+      <h3 class="pub-subhead" data-en="First- &amp; Corresponding-Author" data-ko="제1저자 · 교신저자">First- &amp; Corresponding-Author</h3>
       <ol class="pub-list">
         <li class="pub">
           <div class="pub-venue"><span class="venue">Phys. Rev. Lett.</span><span class="year">2025</span></div>
           <div class="pub-body">
             <p class="pub-title">Nanoscale Plate-like Domain Structures in Ferro-rotational RbFe(MoO₄)₂</p>
-            <p class="pub-authors"><strong>B. Gil</strong>, M.-G. Han, F.-T. Huang, A. Pofelski, L. Jones, S.-W. Cheong, M. Kim, Y. Zhu</p>
-            <p class="pub-status">Under review · submitted May 2025</p>
+            <p class="pub-authors"><strong>B. Gil</strong>, M.-G. Han✻, F.-T. Huang, A. Pofelski, L. Jones, S.-W. Cheong, M. Kim, Y. Zhu</p>
+            <p class="pub-status" data-en="Under review · submitted May 2025" data-ko="심사 중 · 2025년 5월 투고">Under review · submitted May 2025</p>
           </div>
         </li>
         <li class="pub">
@@ -123,7 +195,7 @@
           <div class="pub-body">
             <p class="pub-title">Design Rules for Quantitative Control of Intragrain Planar Defects in Halide Perovskites</p>
             <p class="pub-authors"><strong>B. Gil</strong>†, S. J. Park†, J. Y. Kim✻, M. Kim✻</p>
-            <p class="pub-status">Under review · submitted Mar 2026</p>
+            <p class="pub-status" data-en="Under review · submitted Mar 2026" data-ko="심사 중 · 2026년 3월 투고">Under review · submitted Mar 2026</p>
           </div>
         </li>
         <li class="pub">
@@ -144,57 +216,186 @@
         </li>
       </ol>
 
-      <details class="coauthor">
-        <summary>Selected co-author publications <span>(13 total)</span></summary>
-        <ul class="coauthor-list">
-          <li><span class="venue-sm">Nature Synthesis</span> Selective Iodoplumbate Cold Casting for Kinetically Stabilized Perovskites — <em>accepted, 2026</em></li>
-          <li><span class="venue-sm">Nature Commun.</span> Superconductivity in Isolated Single Copper Oxygen Plane — <em>under review, 2026</em></li>
-          <li><span class="venue-sm">ACS Catalysis</span> Enhancing Acidic Oxygen Evolution Activity by Supporting Ir on Tantalum Carbide — <em>16, 7562 (2026)</em></li>
-          <li><span class="venue-sm">Nano Letters</span> Growth and Electronic Structure of Copper Oxide Monolayer Epitaxial Films — <em>23, 7273 (2023)</em></li>
-          <li><span class="venue-sm">Nano Letters</span> Extended Oxygen Octahedral Tilt Proximity near Oxide Heterostructures — <em>23, 1036 (2023)</em></li>
-          <li><span class="venue-sm">Adv. Science</span> Overcharge-Induced Phase Heterogeneity in LiCoO₂ Cathodes — <em>9, 2203639 (2022)</em></li>
-        </ul>
-      </details>
+      <h3 class="pub-subhead" data-en="Co-author Publications" data-ko="공저자 논문">Co-author Publications</h3>
+      <ol class="pub-list">
+        <li class="pub">
+          <div class="pub-venue"><span class="venue">Nature Synthesis</span><span class="year">2026</span></div>
+          <div class="pub-body">
+            <p class="pub-title">Selective Iodoplumbate Cold Casting for Kinetically Stabilized Perovskites Leading to High-Efficiency Photovoltaic Modules</p>
+            <p class="pub-authors">Y.-W. Jang✻, S. Lee, Y. Yoo, I. Metcalf, H. J. Park, <strong>B. Gil</strong>, J. Jang, F. Mandani, J. Fletcher, B. Kang, J. Zhou, O. J. Oh, S. Bae, M. Kim, J. H. Noh, M. G. Kanatzidis, J. Even, M. Choi✻, A. D. Mohite✻</p>
+            <p class="pub-status" data-en="Accepted, in press · 2026" data-ko="게재 확정 · 2026">Accepted, in press · 2026</p>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-venue"><span class="venue">Nature Commun.</span><span class="year">2026</span></div>
+          <div class="pub-body">
+            <p class="pub-title">Superconductivity in Isolated Single Copper Oxygen Plane</p>
+            <p class="pub-authors">Y. Kim, <strong>B. Gil</strong>, S. Kim, Y. Lee, D. Kim, J. Lee, J. Kim, Y. Kim, M. Kim, C. Kim</p>
+            <p class="pub-status" data-en="Under review · arXiv:2602.06389" data-ko="심사 중 · arXiv:2602.06389">Under review · arXiv:2602.06389</p>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-venue"><span class="venue">ACS Catalysis</span><span class="year">2026</span></div>
+          <div class="pub-body">
+            <p class="pub-title">Enhancing Acidic Oxygen Evolution Activity by Supporting Iridium Electrocatalysts on Tantalum Carbide</p>
+            <p class="pub-authors">S. Kang, X. Han, N. N. Nichols, T. Mou, Y. Yuan, <strong>B. Gil</strong>, Y. Zhu, L. Pan, H. Furusawa, K. Katayama, P. Liu, J. G. Chen</p>
+            <p class="pub-status">16, 7562–7571 (2026)</p>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-venue"><span class="venue">J. Mater. Chem. A</span><span class="year">2024</span></div>
+          <div class="pub-body">
+            <p class="pub-title">Experimental Trends and Theoretical Descriptors for Electrochemical Reduction of Carbon Dioxide to Formate over Sn-based Bimetallic Catalysts</p>
+            <p class="pub-authors">X. Han, B. Wu, Y. Wang, N. N. Nichols, Y. Kwon, Y. Yuan, Z. Xie, S. Kang, <strong>B. Gil</strong>, C. Wang, T. Mou, H. Lin, Y. Nian, Q. Chang</p>
+            <p class="pub-status">12, 23560–23569 (2024)</p>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-venue"><span class="venue">J. Mater. Res. Technol.</span><span class="year">2024</span></div>
+          <div class="pub-body">
+            <p class="pub-title">Atomic-scale Characterization of V-shaped Interface Structure of η₁ Precipitates in Al–Zn–Mg Alloy</p>
+            <p class="pub-authors">H. Kim, J. Oh, Y.-K. Kwon, H. Choi, S. Lee, <strong>B. Gil</strong>, E. S. Park, M. Kim, H. N. Han</p>
+            <p class="pub-status">29, 5252–5258 (2024)</p>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-venue"><span class="venue">Nano Letters</span><span class="year">2023</span></div>
+          <div class="pub-body">
+            <p class="pub-title">Growth and Electronic Structure of Copper Oxide Monolayer Epitaxial Films</p>
+            <p class="pub-authors">Y. Kim, <strong>B. Gil</strong>, J. Kim, Y. Lee, D. Kim, S. Hahn, T. W. Noh, M. Kim, C. Kim</p>
+            <p class="pub-status">23, 7273–7278 (2023)</p>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-venue"><span class="venue">Nano Letters</span><span class="year">2023</span></div>
+          <div class="pub-body">
+            <p class="pub-title">Extended Oxygen Octahedral Tilt Proximity near Oxide Heterostructures</p>
+            <p class="pub-authors">J. Mun, E. K. Ko, B. Kang, <strong>B. Gil</strong>, C. H. Kim, S. Hahn, J. Song, Y. Zhu, C. Sohn, T. W. Noh, M. Kim</p>
+            <p class="pub-status">23, 1036–1043 (2023)</p>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-venue"><span class="venue">APL Materials</span><span class="year">2023</span></div>
+          <div class="pub-body">
+            <p class="pub-title">Luminescence Properties Related to Anti-phase Domains of α-Ga₂O₃</p>
+            <p class="pub-authors">Y.-H. Lee, <strong>B. Gil</strong>, D. Yang, M.-H. Sheen, E. Yoon, Y. Park, H.-W. Jang, S. Yoon, M. Kim, Y.-W. Kim</p>
+            <p class="pub-status">11 (2023)</p>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-venue"><span class="venue">AIP Advances</span><span class="year">2023</span></div>
+          <div class="pub-body">
+            <p class="pub-title">Origin of Extra Diffraction Spots for Highly Crystalline α-Ga₂O₃</p>
+            <p class="pub-authors">Y.-H. Lee, D. Yang, <strong>B. Gil</strong>, M.-H. Sheen, E. Yoon, Y. Park, H.-W. Jang, S. Yoon, M. Kim, Y.-W. Kim</p>
+            <p class="pub-status">13 (2023)</p>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-venue"><span class="venue">Small Methods</span><span class="year">2022</span></div>
+          <div class="pub-body">
+            <p class="pub-title">Defect Engineering in A₂BO₄ Thin Films via Surface-Reconstructed LaSrAlO₄ Substrates</p>
+            <p class="pub-authors">J. Kim, Y. Kim, J. Mun, W. Choi, Y. Chang, J. R. Kim, <strong>B. Gil</strong>, J. H. Lee, S. Hahn, H. Kim, S. H. Chang, G.-D. Lee, M. Kim, C. Kim, T. W. Noh</p>
+            <p class="pub-status">6, 2200880 (2022)</p>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-venue"><span class="venue">Adv. Science</span><span class="year">2022</span></div>
+          <div class="pub-body">
+            <p class="pub-title">Overcharge-Induced Phase Heterogeneity and Resultant Twin-Like Layer Deformation in Lithium Cobalt Oxide Cathode for Lithium-Ion Batteries</p>
+            <p class="pub-authors">J. Oh, S.-Y. Lee, H. Kim, J. Ryu, <strong>B. Gil</strong>, J. Lee, M. Kim</p>
+            <p class="pub-status">9, 2203639 (2022)</p>
+          </div>
+        </li>
+      </ol>
     </section>
 
     <!-- TALKS -->
     <section id="talks" class="block">
       <div class="block-head">
-        <span class="block-index">03</span>
-        <h2>Invited &amp; Selected Talks</h2>
+        <span class="block-index">04</span>
+        <h2 data-en="Talks &amp; Presentations" data-ko="발표">Talks &amp; Presentations</h2>
       </div>
       <ul class="talk-list">
         <li class="talk">
-          <span class="talk-tag invited">Invited</span>
+          <span class="talk-tag" data-en="Oral" data-ko="구두">Oral</span>
           <div class="talk-body">
-            <p class="talk-title">Nanoscale Stripe Domain Structures in Ferroaxial RbFe(MoO₄)₂</p>
-            <p class="talk-where">Microscopy &amp; Microanalysis (M&amp;M) 2025 · Salt Lake City, USA</p>
+            <p class="talk-title">Heating Mitigates Electron-Beam Damage in FAPbI₃ Perovskites via Thermally Activated Recovery</p>
+            <p class="talk-authors"><strong>B. Gil</strong>, M.-G. Han, Y. Zhu, R. Egerton, M. Kim</p>
+            <p class="talk-where">21st International Microscopy Congress (IMC21) · Liverpool, UK</p>
           </div>
-          <span class="talk-date">Aug 2025</span>
+          <span class="talk-date">Sep 2026</span>
         </li>
         <li class="talk">
-          <span class="talk-tag">Oral</span>
+          <span class="talk-tag" data-en="Oral" data-ko="구두">Oral</span>
           <div class="talk-body">
-            <p class="talk-title">Strain–Phase Stability Correlation in FAPbI₃ Revealed by Low-Dose 4D-STEM</p>
+            <p class="talk-title">Strain–Phase Stability Correlation in Halide Perovskites Revealed by Low-Dose 4D-STEM</p>
+            <p class="talk-authors"><strong>B. Gil</strong>, Y.-W. Jang, M.-G. Han, Y. Zhu, A. Mohite, M. Kim</p>
             <p class="talk-where">MRS Spring Meeting 2026 · Honolulu, USA</p>
           </div>
           <span class="talk-date">Apr 2026</span>
         </li>
         <li class="talk">
-          <span class="talk-tag">Oral</span>
+          <span class="talk-tag invited" data-en="Invited" data-ko="초청">Invited</span>
+          <div class="talk-body">
+            <p class="talk-title">Nanoscale Stripe Domain Structures in Ferroaxial RbFe(MoO₄)₂</p>
+            <p class="talk-authors"><strong>B. Gil</strong>, M.-G. Han✻, F.-T. Huang, S.-W. Cheong, M. Kim, Y. Zhu</p>
+            <p class="talk-where">Microscopy &amp; Microanalysis (M&amp;M) 2025 · Salt Lake City, USA</p>
+          </div>
+          <span class="talk-date">Aug 2025</span>
+        </li>
+        <li class="talk">
+          <span class="talk-tag poster" data-en="Poster" data-ko="포스터">Poster</span>
+          <div class="talk-body">
+            <p class="talk-title">Quantitative Study of Electron Beam Damage in Metal Halide Perovskites Using Nanobeam Diffraction</p>
+            <p class="talk-authors"><strong>B. Gil</strong>, M.-G. Han, Y. Zhu, R. F. Egerton, M. Kim✻</p>
+            <p class="talk-where">Microscopy &amp; Microanalysis (M&amp;M) 2025 · Salt Lake City, USA</p>
+          </div>
+          <span class="talk-date">Aug 2025</span>
+        </li>
+        <li class="talk">
+          <span class="talk-tag poster" data-en="Poster" data-ko="포스터">Poster</span>
+          <div class="talk-body">
+            <p class="talk-title">Complexities in Electron Beam–Induced Current (EBIC) Image Formation in Low-Impedance Specimens</p>
+            <p class="talk-authors"><strong>B. Gil</strong>✻, F. E. Camino✻, A. Rúa, K. Kisslinger, M.-G. Han, D. C. Hayes, J. Alban, R. Agrawal, M. Kim, Y. Zhu, J. C. Yang</p>
+            <p class="talk-where">Microscopy &amp; Microanalysis (M&amp;M) 2025 · Salt Lake City, USA</p>
+          </div>
+          <span class="talk-date">Aug 2025</span>
+        </li>
+        <li class="talk">
+          <span class="talk-tag poster" data-en="Poster" data-ko="포스터">Poster</span>
+          <div class="talk-body">
+            <p class="talk-title">Humidity-Induced Phase Transition Stages in FAPbI₃ Revealed by Ultralow-Dose 4D-STEM</p>
+            <p class="talk-authors"><strong>B. Gil</strong>, Y.-W. Jang, M.-G. Han, Y. Zhu, A. Mohite, M. Kim</p>
+            <p class="talk-where">MRS Fall Meeting 2024 · Boston, MA, USA</p>
+          </div>
+          <span class="talk-date">Dec 2024</span>
+        </li>
+        <li class="talk">
+          <span class="talk-tag" data-en="Oral" data-ko="구두">Oral</span>
           <div class="talk-body">
             <p class="talk-title">Ultralow-Dose TEM: Grain Size–Dependent Sub-Grain Planar Defects via A-Site Tuning</p>
+            <p class="talk-authors"><strong>B. Gil</strong>, S. J. Park, J. Y. Kim, M. Kim</p>
             <p class="talk-where">M&amp;M 2024 · Cleveland, USA</p>
           </div>
           <span class="talk-date">Jul 2024</span>
         </li>
         <li class="talk">
-          <span class="talk-tag">Oral</span>
+          <span class="talk-tag" data-en="Oral" data-ko="구두">Oral</span>
           <div class="talk-body">
             <p class="talk-title">Grain Size–Dependency of Intragrain Planar Defects in Halide Perovskites by Ultralow-Dose TEM</p>
+            <p class="talk-authors"><strong>B. Gil</strong>, S. J. Park, J. Y. Kim, M. Kim</p>
             <p class="talk-where">20th International Microscopy Congress (IMC20) · Busan, Korea</p>
           </div>
           <span class="talk-date">Sep 2023</span>
+        </li>
+        <li class="talk">
+          <span class="talk-tag" data-en="Oral" data-ko="구두">Oral</span>
+          <div class="talk-body">
+            <p class="talk-title">Guanidinium Incorporation Effects on the Microstructure of MAPbI₃ Perovskites</p>
+            <p class="talk-authors"><strong>B. Gil</strong>, S. J. Park, J. Y. Kim, M. Kim</p>
+            <p class="talk-where">East Asia Microscopy Conference (EAMC) · Taiwan (Virtual)</p>
+          </div>
+          <span class="talk-date">2022</span>
         </li>
       </ul>
     </section>
@@ -202,44 +403,47 @@
     <!-- AWARDS -->
     <section id="awards" class="block">
       <div class="block-head">
-        <span class="block-index">04</span>
-        <h2>Awards &amp; Fellowships</h2>
+        <span class="block-index">05</span>
+        <h2 data-en="Awards &amp; Fellowships" data-ko="수상 및 연구비">Awards &amp; Fellowships</h2>
       </div>
       <ul class="award-list">
         <li>
           <span class="award-year">2026</span>
           <div>
-            <p class="award-name">Outstanding Paper Award — Instrumentation &amp; Software</p>
-            <p class="award-org">Microscopy and Microanalysis, as co-corresponding author with Dr. Fernando Camino</p>
+            <p class="award-name" data-en="Outstanding Paper Award — Instrumentation &amp; Software" data-ko="우수논문상 — Instrumentation &amp; Software 부문">Outstanding Paper Award — Instrumentation &amp; Software</p>
+            <p class="award-org" data-en="Microscopy and Microanalysis, as co-corresponding author with Dr. Fernando Camino" data-ko="Microscopy and Microanalysis · Fernando Camino 박사와 공동 교신저자">Microscopy and Microanalysis, as co-corresponding author with Dr. Fernando Camino</p>
             <p class="award-paper">“Enabling the Acquisition of Electron Beam-Induced Current (EBIC) Images in Conventional SEM and STEM Instruments”</p>
           </div>
         </li>
         <li>
           <span class="award-year">2026</span>
           <div>
-            <p class="award-name">Bronze Prize, 32nd Samsung HumanTech Paper Award</p>
-            <p class="award-org">Basic Science Division</p>
+            <p class="award-name" data-en="Bronze Prize, 32nd Samsung HumanTech Paper Award" data-ko="동상, 제32회 삼성휴먼테크논문대상">Bronze Prize, 32nd Samsung HumanTech Paper Award</p>
+            <p class="award-org" data-en="Basic Science Division" data-ko="기초과학 분야">Basic Science Division</p>
+            <p class="award-paper">“Nanoscale Plate-like Domain Structures in Ferro-rotational RbFe(MoO₄)₂”</p>
           </div>
         </li>
         <li>
           <span class="award-year">2025</span>
           <div>
-            <p class="award-name">Student Poster Award, M&amp;M Conference</p>
-            <p class="award-org">Microscopy Society of America</p>
+            <p class="award-name" data-en="Student Poster Award, M&amp;M Conference" data-ko="학생 포스터상, M&amp;M 학회">Student Poster Award, M&amp;M Conference</p>
+            <p class="award-org" data-en="Microscopy Society of America" data-ko="미국현미경학회 (MSA)">Microscopy Society of America</p>
+            <p class="award-paper">“Quantitative Study of Electron Beam Damage in Metal Halide Perovskites Using Nanobeam Diffraction”</p>
           </div>
         </li>
         <li>
           <span class="award-year">2024</span>
           <div>
-            <p class="award-name">MSA Student Scholar Award, M&amp;M Conference</p>
-            <p class="award-org">Microscopy Society of America</p>
+            <p class="award-name" data-en="MSA Student Scholar Award, M&amp;M Conference" data-ko="MSA 학생 장학상, M&amp;M 학회">MSA Student Scholar Award, M&amp;M Conference</p>
+            <p class="award-org" data-en="Microscopy Society of America" data-ko="미국현미경학회 (MSA)">Microscopy Society of America</p>
+            <p class="award-paper">“Ultralow-Dose TEM Study: Modulating the Grain Size–Dependent Sub-Grain Planar Defects via A-Site Compositional Tuning in Metal Halide Perovskites”</p>
           </div>
         </li>
         <li>
           <span class="award-year">2024</span>
           <div>
-            <p class="award-name">BK21 FOUR Overseas Training Scholarship</p>
-            <p class="award-org">National Research Foundation of Korea — 14-month fellowship at Brookhaven National Lab</p>
+            <p class="award-name" data-en="BK21 FOUR Overseas Training Scholarship" data-ko="BK21 FOUR 해외연수 장학금">BK21 FOUR Overseas Training Scholarship</p>
+            <p class="award-org" data-en="National Research Foundation of Korea — 14-month fellowship at Brookhaven National Lab" data-ko="한국연구재단(NRF) — 브룩헤이븐 국립연구소 14개월 연수">National Research Foundation of Korea — 14-month fellowship at Brookhaven National Lab</p>
           </div>
         </li>
       </ul>
@@ -248,28 +452,28 @@
     <!-- TECHNICAL -->
     <section id="technical" class="block">
       <div class="block-head">
-        <span class="block-index">05</span>
-        <h2>Technical Expertise</h2>
+        <span class="block-index">06</span>
+        <h2 data-en="Technical Expertise" data-ko="기술 역량">Technical Expertise</h2>
       </div>
       <div class="tech-grid">
         <div class="tech-col">
-          <h3>Microscopy &amp; Instrumentation</h3>
+          <h3 data-en="Microscopy &amp; Instrumentation" data-ko="현미경 및 장비">Microscopy &amp; Instrumentation</h3>
           <ul>
-            <li>Cs-corrected (S)TEM — EELS, DPC, 4D-STEM</li>
+            <li data-en="Cs-corrected (S)TEM — EELS, DPC, 4D-STEM" data-ko="수차보정 (S)TEM — EELS, DPC, 4D-STEM">Cs-corrected (S)TEM — EELS, DPC, 4D-STEM</li>
             <li>JEOL ARM-200F · Thermo Fisher Themis Z</li>
-            <li>FIB specimen preparation</li>
+            <li data-en="FIB specimen preparation" data-ko="FIB 시편 제작">FIB specimen preparation</li>
           </ul>
         </div>
         <div class="tech-col">
-          <h3>Data Analysis &amp; Simulation</h3>
+          <h3 data-en="Data Analysis &amp; Simulation" data-ko="데이터 분석 및 시뮬레이션">Data Analysis &amp; Simulation</h3>
           <ul>
-            <li>4D-STEM — <span class="mono">py4DSTEM</span></li>
-            <li>Electron ptychography — <span class="mono">ptyRAD</span></li>
-            <li>Multislice simulation — <span class="mono">abTEM</span></li>
+            <li><span data-en="4D-STEM —" data-ko="4D-STEM 분석 —">4D-STEM —</span> <span class="mono">py4DSTEM</span></li>
+            <li><span data-en="Electron ptychography —" data-ko="전자 타이코그래피 —">Electron ptychography —</span> <span class="mono">ptyRAD</span></li>
+            <li><span data-en="Multislice simulation —" data-ko="멀티슬라이스 시뮬레이션 —">Multislice simulation —</span> <span class="mono">abTEM</span></li>
           </ul>
         </div>
         <div class="tech-col">
-          <h3>First-Principles</h3>
+          <h3 data-en="First-Principles" data-ko="제일원리 계산">First-Principles</h3>
           <ul>
             <li>DFT — <span class="mono">VASP</span></li>
           </ul>
@@ -280,10 +484,12 @@
     <!-- CONTACT -->
     <section id="contact" class="block contact">
       <div class="block-head">
-        <span class="block-index">06</span>
-        <h2>Get in Touch</h2>
+        <span class="block-index">07</span>
+        <h2 data-en="Get in Touch" data-ko="연락처">Get in Touch</h2>
       </div>
-      <p class="contact-lede">
+      <p class="contact-lede"
+         data-en="Open to collaborations on beam-sensitive materials, 4D-STEM, and ptychography — and to conversations about where this work goes next."
+         data-ko="빔 민감 물질, 4D-STEM, 타이코그래피 관련 공동연구를 환영합니다. 이 연구가 다음으로 나아갈 방향에 대한 대화도 좋습니다.">
         Open to collaborations on beam-sensitive materials, 4D-STEM, and ptychography —
         and to conversations about where this work goes next.
       </p>
@@ -299,7 +505,50 @@
 
   <footer class="site-footer">
     <span>© 2026 Byeongjun Gil</span>
-    <span class="footer-note">Seoul · Built on diffraction</span>
+    <span class="footer-note" data-en="Seoul · Built on diffraction" data-ko="서울 · Built on diffraction">Seoul · Built on diffraction</span>
   </footer>
+
+  <script>
+    (function () {
+      var STRINGS = {
+        en: { title: "Byeongjun Gil — Electron Microscopist" },
+        ko: { title: "길병준 — 전자현미경 연구자" }
+      };
+
+      function applyLang(lang) {
+        document.documentElement.lang = lang;
+        var nodes = document.querySelectorAll('[data-' + lang + ']');
+        for (var i = 0; i < nodes.length; i++) {
+          var val = nodes[i].getAttribute('data-' + lang);
+          if (val !== null) nodes[i].innerHTML = val;
+        }
+        document.title = STRINGS[lang].title;
+        var btns = document.querySelectorAll('.lang-btn');
+        for (var j = 0; j < btns.length; j++) {
+          btns[j].classList.toggle('is-active', btns[j].getAttribute('data-lang') === lang);
+        }
+      }
+
+      // Detect on first load: Korean browsers -> ko, otherwise en.
+      var initial = 'en';
+      var pref = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+      if (pref.toLowerCase().indexOf('ko') === 0) initial = 'ko';
+      applyLang(initial);
+
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          applyLang(btn.getAttribute('data-lang'));
+        });
+      });
+
+      // Theme toggle (dark default, switch to light on click)
+      var themeBtn = document.querySelector('.theme-btn');
+      if (themeBtn) {
+        themeBtn.addEventListener('click', function () {
+          document.documentElement.classList.toggle('light');
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
