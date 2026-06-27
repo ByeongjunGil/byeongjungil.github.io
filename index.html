@@ -2,74 +2,304 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- mobile-friendly -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Byeongjun Gil | Materials Scientist</title>
-  <meta name="description" content="Portfolio and research highlights of Byeongjun Gil.">
+  <title>Byeongjun Gil — Electron Microscopist</title>
+  <meta name="description" content="Byeongjun Gil is a PhD candidate at Seoul National University developing low-dose and 4D-STEM electron microscopy to image beam-sensitive and quantum materials.">
   <meta name="google-site-verification" content="K0gj-b_T-Cnl3FZCOMI-Ic1tz_FYkcfnC0b5a7ZQSj4" />
 
-  <!-- favicon (add your own icon at /favicon.ico) -->
   <link rel="icon" href="/favicon.ico">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Open Graph for link previews -->
-  <meta property="og:title" content="Byeongjun Gil | Materials Scientist">
-  <meta property="og:description" content="Research highlights and projects of Byeongjun Gil.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Byeongjun Gil — Electron Microscopist">
+  <meta property="og:description" content="PhD candidate developing low-dose and 4D-STEM electron microscopy for beam-sensitive and quantum materials.">
   <meta property="og:url" content="https://byeongjungil.github.io/">
   <meta property="og:image" content="https://byeongjungil.github.io/preview.png">
+  <meta property="og:type" content="website">
 </head>
 <body>
-  <header>
+  <div class="diffraction" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="#top" class="wordmark">B<span>·</span>Gil</a>
     <nav>
       <ul class="nav-list">
-        <li><a href="#about">About</a></li>
         <li><a href="#research">Research</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#talks">Talks</a></li>
+        <li><a href="#awards">Awards</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="about">
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <p class="eyebrow">Electron microscopy · Seoul National University</p>
       <h1>Byeongjun Gil</h1>
-      <p>Grad. student at SNU, working on advanced TEM &amp; 4D-STEM of perovskite materials.</p>
+      <p class="lede">
+        I build <strong>low-dose</strong> and <strong>four-dimensional</strong> electron
+        microscopy methods to see materials that fall apart under the beam — halide
+        perovskites, multiferroics, and quantum oxides — and read the structure hidden
+        in their diffraction.
+      </p>
+      <div class="hero-meta">
+        <span>PhD candidate, Materials Science &amp; Engineering</span>
+        <span>Advisor: Prof. Miyoung Kim</span>
+        <span>Former visiting researcher, Brookhaven National Lab</span>
+      </div>
+      <div class="hero-links">
+        <a class="btn" href="#contact">Get in touch</a>
+        <a class="btn ghost" href="https://scholar.google.com/citations?user=r3LQWNEAAAAJ" target="_blank" rel="noopener">Google Scholar →</a>
+      </div>
     </section>
 
-    <section id="research">
-      <h2>Research Highlights</h2>
-      <ul>
-        <li>Low-dose TEM study on halide perovskites </li>
-        <li>Systematic estimation of electron beam damage </li>
-        <li>Nanoscale structural analsis using low-dose 4D-STEM data</li>
+    <!-- ABOUT -->
+    <section id="about" class="block">
+      <div class="block-head">
+        <span class="block-index">01</span>
+        <h2>About</h2>
+      </div>
+      <div class="prose">
+        <p>
+          I am a PhD candidate in Materials Science and Engineering at Seoul National
+          University, working with Prof. Miyoung Kim. My research resolves atomic- and
+          nanoscale phenomena in functional materials by developing and applying advanced
+          scanning transmission electron microscopy.
+        </p>
+        <p>
+          The materials I care about are the ones conventional microscopy struggles with:
+          they degrade within seconds of exposure, or hide their order parameters below the
+          contrast of standard imaging. From 2024 to 2025 I worked as a visiting researcher
+          at Brookhaven National Laboratory with Dr. Yimei Zhu, characterizing multiferroic
+          and beam-sensitive materials. I use that vantage — low-dose acquisition, 4D-STEM,
+          and electron ptychography — to capture pristine structure and the pathways by
+          which it breaks down.
+        </p>
+      </div>
+      <div class="focus-grid">
+        <article class="focus">
+          <h3>Low-dose (S)TEM</h3>
+          <p>Imaging beam-sensitive halide perovskites and complex oxides before the electron beam rewrites them.</p>
+        </article>
+        <article class="focus">
+          <h3>In situ cryo-(S)TEM</h3>
+          <p>Watching temperature-driven structural and order-parameter transitions in multiferroic and quantum materials, live.</p>
+        </article>
+        <article class="focus">
+          <h3>Electron ptychography</h3>
+          <p>Resolving point defects and light elements that conventional STEM modes simply cannot reach.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="block">
+      <div class="block-head">
+        <span class="block-index">02</span>
+        <h2>Selected Publications</h2>
+      </div>
+      <p class="block-note">First- and corresponding-author work. Full list on <a href="https://scholar.google.com/citations?user=r3LQWNEAAAAJ" target="_blank" rel="noopener">Google Scholar</a>. <span class="legend">† equal contribution · ✻ corresponding</span></p>
+
+      <ol class="pub-list">
+        <li class="pub">
+          <div class="pub-venue"><span class="venue">Phys. Rev. Lett.</span><span class="year">2025</span></div>
+          <div class="pub-body">
+            <p class="pub-title">Nanoscale Plate-like Domain Structures in Ferro-rotational RbFe(MoO₄)₂</p>
+            <p class="pub-authors"><strong>B. Gil</strong>, M.-G. Han, F.-T. Huang, A. Pofelski, L. Jones, S.-W. Cheong, M. Kim, Y. Zhu</p>
+            <p class="pub-status">Under review · submitted May 2025</p>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-venue"><span class="venue">Advanced Science</span><span class="year">2026</span></div>
+          <div class="pub-body">
+            <p class="pub-title">Design Rules for Quantitative Control of Intragrain Planar Defects in Halide Perovskites</p>
+            <p class="pub-authors"><strong>B. Gil</strong>†, S. J. Park†, J. Y. Kim✻, M. Kim✻</p>
+            <p class="pub-status">Under review · submitted Mar 2026</p>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-venue"><span class="venue">Microsc. Microanal.</span><span class="year">2025</span></div>
+          <div class="pub-body">
+            <p class="pub-title">Enabling the Acquisition of Electron Beam-Induced Current (EBIC) Images in Conventional SEM and STEM Instruments</p>
+            <p class="pub-authors">F. Camino✻, <strong>B. Gil</strong>✻, A. Rúa, M. Li, D. N. Zakharov, K. Kisslinger, M.-G. Han, et al.</p>
+            <p class="pub-status"><a href="https://doi.org/10.1093/mam/ozaf080" target="_blank" rel="noopener">31, ozaf080 (2025) · 10.1093/mam/ozaf080 →</a></p>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-venue"><span class="venue">Adv. Energy Mater.</span><span class="year">2025</span></div>
+          <div class="pub-body">
+            <p class="pub-title">Pure-Iodide Wide-Bandgap Perovskite Solar Cells With Enhanced Photo/Thermal Stability</p>
+            <p class="pub-authors">G. P. Hong†, <strong>B. Gil</strong>†, S. J. Park, Y. J. Choi, Y. S. Yoon, M. Kim✻, J. Y. Kim✻</p>
+            <p class="pub-status"><a href="https://doi.org/10.1002/aenm.202505731" target="_blank" rel="noopener">e05731 (2025) · 10.1002/aenm.202505731 →</a></p>
+          </div>
+        </li>
+      </ol>
+
+      <details class="coauthor">
+        <summary>Selected co-author publications <span>(13 total)</span></summary>
+        <ul class="coauthor-list">
+          <li><span class="venue-sm">Nature Synthesis</span> Selective Iodoplumbate Cold Casting for Kinetically Stabilized Perovskites — <em>accepted, 2026</em></li>
+          <li><span class="venue-sm">Nature Commun.</span> Superconductivity in Isolated Single Copper Oxygen Plane — <em>under review, 2026</em></li>
+          <li><span class="venue-sm">ACS Catalysis</span> Enhancing Acidic Oxygen Evolution Activity by Supporting Ir on Tantalum Carbide — <em>16, 7562 (2026)</em></li>
+          <li><span class="venue-sm">Nano Letters</span> Growth and Electronic Structure of Copper Oxide Monolayer Epitaxial Films — <em>23, 7273 (2023)</em></li>
+          <li><span class="venue-sm">Nano Letters</span> Extended Oxygen Octahedral Tilt Proximity near Oxide Heterostructures — <em>23, 1036 (2023)</em></li>
+          <li><span class="venue-sm">Adv. Science</span> Overcharge-Induced Phase Heterogeneity in LiCoO₂ Cathodes — <em>9, 2203639 (2022)</em></li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- TALKS -->
+    <section id="talks" class="block">
+      <div class="block-head">
+        <span class="block-index">03</span>
+        <h2>Invited &amp; Selected Talks</h2>
+      </div>
+      <ul class="talk-list">
+        <li class="talk">
+          <span class="talk-tag invited">Invited</span>
+          <div class="talk-body">
+            <p class="talk-title">Nanoscale Stripe Domain Structures in Ferroaxial RbFe(MoO₄)₂</p>
+            <p class="talk-where">Microscopy &amp; Microanalysis (M&amp;M) 2025 · Salt Lake City, USA</p>
+          </div>
+          <span class="talk-date">Aug 2025</span>
+        </li>
+        <li class="talk">
+          <span class="talk-tag">Oral</span>
+          <div class="talk-body">
+            <p class="talk-title">Strain–Phase Stability Correlation in FAPbI₃ Revealed by Low-Dose 4D-STEM</p>
+            <p class="talk-where">MRS Spring Meeting 2026 · Honolulu, USA</p>
+          </div>
+          <span class="talk-date">Apr 2026</span>
+        </li>
+        <li class="talk">
+          <span class="talk-tag">Oral</span>
+          <div class="talk-body">
+            <p class="talk-title">Ultralow-Dose TEM: Grain Size–Dependent Sub-Grain Planar Defects via A-Site Tuning</p>
+            <p class="talk-where">M&amp;M 2024 · Cleveland, USA</p>
+          </div>
+          <span class="talk-date">Jul 2024</span>
+        </li>
+        <li class="talk">
+          <span class="talk-tag">Oral</span>
+          <div class="talk-body">
+            <p class="talk-title">Grain Size–Dependency of Intragrain Planar Defects in Halide Perovskites by Ultralow-Dose TEM</p>
+            <p class="talk-where">20th International Microscopy Congress (IMC20) · Busan, Korea</p>
+          </div>
+          <span class="talk-date">Sep 2023</span>
+        </li>
       </ul>
     </section>
 
-    <section id="projects">
-      <h2>Selected Projects</h2>
-      <article>
-        <h3>Beam damage estimation</h3>
-        <p><a href="https://github.com/ByeongjunGil/Beam-damage" target="_blank">View code on GitHub →</a></p>
-      </article>
-      <!-- add more <article> as needed -->
+    <!-- AWARDS -->
+    <section id="awards" class="block">
+      <div class="block-head">
+        <span class="block-index">04</span>
+        <h2>Awards &amp; Fellowships</h2>
+      </div>
+      <ul class="award-list">
+        <li>
+          <span class="award-year">2026</span>
+          <div>
+            <p class="award-name">Outstanding Paper Award — Instrumentation &amp; Software</p>
+            <p class="award-org">Microscopy and Microanalysis, as co-corresponding author with Dr. Fernando Camino</p>
+            <p class="award-paper">“Enabling the Acquisition of Electron Beam-Induced Current (EBIC) Images in Conventional SEM and STEM Instruments”</p>
+          </div>
+        </li>
+        <li>
+          <span class="award-year">2026</span>
+          <div>
+            <p class="award-name">Bronze Prize, 32nd Samsung HumanTech Paper Award</p>
+            <p class="award-org">Basic Science Division</p>
+          </div>
+        </li>
+        <li>
+          <span class="award-year">2025</span>
+          <div>
+            <p class="award-name">Student Poster Award, M&amp;M Conference</p>
+            <p class="award-org">Microscopy Society of America</p>
+          </div>
+        </li>
+        <li>
+          <span class="award-year">2024</span>
+          <div>
+            <p class="award-name">MSA Student Scholar Award, M&amp;M Conference</p>
+            <p class="award-org">Microscopy Society of America</p>
+          </div>
+        </li>
+        <li>
+          <span class="award-year">2024</span>
+          <div>
+            <p class="award-name">BK21 FOUR Overseas Training Scholarship</p>
+            <p class="award-org">National Research Foundation of Korea — 14-month fellowship at Brookhaven National Lab</p>
+          </div>
+        </li>
+      </ul>
     </section>
 
-    <section id="contact">
-      <h2>Get in Touch</h2>
-      <p>Email: <a href="mailto:bgil@bnl.gov">bgil@bnl.gov</a></p>
-      <p>
-        <a href="https://www.linkedin.com/in/byeongjungil" target="_blank">LinkedIn</a> •
-        <a href="https://github.com/ByeongjunGil" target="_blank">GitHub</a> •
-        <a href="https://orcid.org/0000-0000-0000-0000" target="_blank">ORCID</a>
-      </p>
+    <!-- TECHNICAL -->
+    <section id="technical" class="block">
+      <div class="block-head">
+        <span class="block-index">05</span>
+        <h2>Technical Expertise</h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-col">
+          <h3>Microscopy &amp; Instrumentation</h3>
+          <ul>
+            <li>Cs-corrected (S)TEM — EELS, DPC, 4D-STEM</li>
+            <li>JEOL ARM-200F · Thermo Fisher Themis Z</li>
+            <li>FIB specimen preparation</li>
+          </ul>
+        </div>
+        <div class="tech-col">
+          <h3>Data Analysis &amp; Simulation</h3>
+          <ul>
+            <li>4D-STEM — <span class="mono">py4DSTEM</span></li>
+            <li>Electron ptychography — <span class="mono">ptyRAD</span></li>
+            <li>Multislice simulation — <span class="mono">abTEM</span></li>
+          </ul>
+        </div>
+        <div class="tech-col">
+          <h3>First-Principles</h3>
+          <ul>
+            <li>DFT — <span class="mono">VASP</span></li>
+          </ul>
+        </div>
+      </div>
     </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="block contact">
+      <div class="block-head">
+        <span class="block-index">06</span>
+        <h2>Get in Touch</h2>
+      </div>
+      <p class="contact-lede">
+        Open to collaborations on beam-sensitive materials, 4D-STEM, and ptychography —
+        and to conversations about where this work goes next.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:byeongjungil30@gmail.com">byeongjungil30@gmail.com</a>
+        <a href="https://scholar.google.com/citations?user=r3LQWNEAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/byeongjungil" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/ByeongjunGil" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>© 2025 Byeongjun Gil</p>
+  <footer class="site-footer">
+    <span>© 2026 Byeongjun Gil</span>
+    <span class="footer-note">Seoul · Built on diffraction</span>
   </footer>
 </body>
 </html>
